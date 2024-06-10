@@ -1,0 +1,50 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type Message @model {
+  id: ID!
+  from: String!
+  subject: String!
+  summary: String!
+  relatedLocation: String
+  related: String
+  date: AWSDate!
+  seen: Boolean!
+  replied: Boolean!
+  sfid: String!
+}
+
+type WorkOrder @model {
+  id: ID!
+  sfID: String!
+  requestDate: AWSDate!
+  scheduledDate: AWSDate!
+  completedDate: AWSDate
+  locationName: String!
+  address: String!
+  city: String
+  state: String
+  postalCode: String
+  country: String
+  latitude: Float!
+  longitude: Float!
+  link: String
+  owner: String!
+  type: WorkOrderType!
+  status: WorkOrderStatus!
+}
+
+enum WorkOrderType {
+  SURVEY
+  INSTALL
+  ACTIVATION
+  REMOVAL
+}
+
+enum WorkOrderStatus {
+  OPEN
+  COMPLETED
+  CANCELED
+  FAILED
+}

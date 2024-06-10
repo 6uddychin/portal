@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactvendorportal-dev-e8f99-authRole",
+      "UnauthRoleArn": "arn:aws:iam::280101802050:role/amplify-reactvendorportal-dev-e8f99-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::280101802050:role/amplify-reactvendorportal-dev-e8f99-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactvendorportal-dev-e8f99-deployment",
+      "UnauthRoleName": "amplify-reactvendorportal-dev-e8f99-unauthRole",
+      "StackName": "amplify-reactvendorportal-dev-e8f99",
+      "StackId": "arn:aws:cloudformation:us-east-1:280101802050:stack/amplify-reactvendorportal-dev-e8f99/38746dc0-26c2-11ef-800d-0e9c1f88796f",
+      "AmplifyAppId": "d2px296zwxcf8x"
+    },
+    "categories": {
+      "api": {
+        "reactvendorportal": {}
+      },
+      "auth": {
+        "reactvendorportal2ca0f0d8": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2px296zwxcf8x",
+          "type": "manual"
+        }
+      },
+      "storage": {
+        "s3d0e52b40": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "resourceName": "s3d0e52b40",
+  "policyUUID": "d0e52b40",
+  "bucketName": "reactvendorportald893dccdbea849fdb3cc0dab293027",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
