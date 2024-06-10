@@ -1,0 +1,86 @@
+             <MapContainer center={position} zoom={13} style={{ height: '400px',  width: '400px', marginBottom: '20px' }}>
+                <TileLayer
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                />
+                <Marker position={position}>
+                  <Popup>
+                    {selectedRow.address}
+                  </Popup>
+                </Marker>
+              </MapContainer>
+              <h2>Location Details</h2>
+              <p><strong>{selectedRow.locationName}</strong> {selectedRow.address}, {selectedRow.city} {selectedRow.state} {selectedRow.postalCode} </p>
+              <p><strong>POC</strong> some person <strong> P </strong> xxx-xxxx</p>
+              <h2>Work Details</h2>
+              <DialogContentText>
+
+                <Grid container spacing={2} columns={24 }>
+                  <Grid item xs={6} md={8}>
+                    <Item>
+                      <p><strong>Type:</strong> {selectedRow.type} </p>
+              
+                    </Item>
+                  </Grid>
+
+                  <Grid item xs={6} md={8}>
+                    <Item>
+                      <p> <strong> Program </strong> add program</p> 
+                    </Item>
+                  </Grid>
+                  <Grid item xs={6} md={8}>
+                    <Item>
+                      <a href={selectedRow.link} target="_blank" rel="noopener noreferrer">View Link</a>
+                    </Item>
+                    
+                  </Grid>
+
+                </Grid>
+                <p><strong>Request Date:</strong> {selectedRow.requestDate} <strong> Scheduled Date:</strong> {selectedRow.scheduledDate}</p>
+               
+                
+
+              </DialogContentText>
+              <Grid container spacing={2} columns={16}>
+                <Grid item xs={6} md={8}>
+                  <Item>
+                  <TextField
+                margin="dense"
+                label="Completed Date"
+                type="date"
+                fullWidth
+                variant="outlined"
+                value={completedDate}
+                onChange={(e) => setCompletedDate(e.target.value)}
+                InputLabelProps={{ shrink: true }}
+              />
+                  </Item>
+                </Grid>
+
+                <Grid item xs={6} md={8}>
+                  <Item>
+                  <TextField
+                margin="dense"
+                label="Owner"
+                fullWidth
+                variant="outlined"
+                value={owner}
+                onChange={(e) => setOwner(e.target.value)}
+              />
+                  </Item>
+                </Grid>
+              </Grid>
+
+              <h2>Related</h2>
+              <Grid container spacing={2} columns={16}>
+                <Grid item xs={6} md={8}>
+                  <Item>
+              <TextField margin="dense" label="Upload File"></TextField>
+              </Item>
+              </Grid>
+              <Grid item xs={6} md={8}>
+                  <Item>
+              <TextField margin="dense" label="messages"></TextField>
+              </Item>
+              </Grid>
+              </Grid>
